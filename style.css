@@ -1,0 +1,70 @@
+ body {
+    margin: 0;
+    padding: 0;
+    background-color: red;
+    color: white;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    white-space: pre-line; /* Позволяет отображать переносы строк */
+} 
+.container {
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+#animated-text {
+    position: absolute;
+    top: 100%;
+    opacity: 0;
+    animation: moveUp 2s ease-in-out forwards;
+}
+@keyframes moveUp {
+    0% {
+        top: 100%;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 1;
+    }
+}
+.netflix-presents {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 20%;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
